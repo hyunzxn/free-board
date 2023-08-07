@@ -1,0 +1,8 @@
+### 댓글 작성
+POST {{root-path}}/posts/1/comments
+Content-Type: application/json
+
+{
+  "password": "12345",
+  "content": "쉑쉑버거 맛있음 ㅇㅅㅇ"
+}

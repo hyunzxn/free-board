@@ -1,0 +1,33 @@
+### 게시글 생성
+POST {{root-path}}/posts
+Content-Type: application/json
+
+{
+  "postType": "FREE",
+  "title": "개발 잘 해서 좋은 회사 가고 싶다.",
+  "content": "열심히 해보자!"
+}
+
+
+### 게시글 전체 조회
+GET {{root-path}}/posts
+
+
+### 게시글 단건 조회
+GET {{root-path}}/posts/1
+
+
+### 게시글 수정
+PUT {{root-path}}/posts/4
+Content-Type: application/json
+
+{
+  "postType": "FREE",
+  "title": "돈 많이 벌고 싶다.",
+  "content": "돈도 많이 벌고 예쁜 사람하고 연애하고 싶다."
+}
+
+
+### 게시글 삭제
+DELETE {{root-path}}/posts/4
+

@@ -1,0 +1,40 @@
+spring:
+  profiles:
+    default: local
+  datasource:
+    url: jdbc:mariadb://localhost:3306/jun_free_board
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+#jwt:
+#  secretKey: sfasdrllwkefasdfjw8bsrwqriwf4fsafwfawerfjslqirwifqjsdf5jllaqweirwfjq1fqwerwefqjjuklasdfli4gsafwrqwifsfq4sfas13124tafasfswqtwggawrqf
+#  access:
+#    expiration: 3600000 # 1시간(60분) (1000L(ms -> s) * 60L(s -> m) * 60L(m -> h))
+#    header: Authorization
+#
+#  refresh:
+#    expiration: 1209600000 #  (1000L(ms -> s) * 60L(s -> m) * 60L(m -> h) * 24L(h -> 하루) * 14(2주)
+#    header: Authorization-refresh
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always

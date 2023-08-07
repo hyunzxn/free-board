@@ -1,0 +1,44 @@
+### 회원가입1
+POST {{root-path}}/auth/sign-up
+Content-Type: application/json
+
+{
+  "name": "문현준",
+  "email": "jann1653@gmail.com",
+  "password": "12345",
+  "nickname": "JUNN"
+}
+
+
+### 회원가입2
+POST {{root-path}}/auth/sign-up
+Content-Type: application/json
+
+{
+  "name": "정예림",
+  "email": "yerim@gmail.com",
+  "password": "12345",
+  "nickname": "yerimyy"
+}
+
+
+### 로그인1
+POST {{root-path}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "jann1653@gmail.com",
+  "password": "12345"
+}
+
+### 로그인2
+POST {{root-path}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "yerim@gmail.com",
+  "password": "12345"
+}
+
+### 로그아웃
+POST {{root-path}}/auth/logout
