@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.freeboard.request.comment.CommentCreateRequest;
 import com.freeboard.domain.user.UserPrincipal;
+import com.freeboard.request.comment.CommentCreateRequest;
 import com.freeboard.response.ApiResponse;
 import com.freeboard.response.comment.CommentResponse;
 import com.freeboard.service.comment.CommentService;
@@ -29,7 +29,7 @@ public class CommentController {
 
 	@PreAuthorize("isAuthenticated()")
 	@PostMapping("/posts/{postId}/comments")
-	private ApiResponse<CommentResponse> createComment(
+	public ApiResponse<CommentResponse> createComment(
 		@AuthenticationPrincipal UserPrincipal userPrincipal,
 		@PathVariable Long postId,
 		@RequestBody @Valid CommentCreateRequest request) {

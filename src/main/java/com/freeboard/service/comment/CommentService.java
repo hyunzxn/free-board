@@ -33,7 +33,7 @@ public class CommentService {
 
 		String encryptedPassword = passwordEncoder.encode(request.getPassword());
 
-		Comment comment = Comment.of(request.getPassword(), encryptedPassword);
+		Comment comment = Comment.of(encryptedPassword, request.getContent());
 		comment.setAuthor(user.getNickname());
 		comment.setPost(post);
 		Comment savedComment = commentRepository.save(comment);
