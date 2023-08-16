@@ -1,4 +1,4 @@
-package com.zun.freeboard.service.post;
+package com.freeboard.service.post;
 
 import static com.freeboard.domain.post.PostType.*;
 import static org.assertj.core.api.Assertions.*;

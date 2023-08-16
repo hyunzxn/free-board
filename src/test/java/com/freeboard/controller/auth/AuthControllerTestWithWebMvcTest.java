@@ -1,4 +1,4 @@
-package com.zun.freeboard.controller.auth;
+package com.freeboard.controller.auth;
 
 import static org.springframework.http.MediaType.*;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.*;

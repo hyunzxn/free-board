@@ -1,4 +1,4 @@
-package com.zun.freeboard.config;
+package com.freeboard.config;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

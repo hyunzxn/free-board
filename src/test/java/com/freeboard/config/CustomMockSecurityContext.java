@@ -1,4 +1,4 @@
-package com.zun.freeboard.config;
+package com.freeboard.config;
 
 import java.util.List;
 

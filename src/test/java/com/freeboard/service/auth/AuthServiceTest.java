@@ -1,4 +1,4 @@
-package com.zun.freeboard.service.auth;
+package com.freeboard.service.auth;
 
 import static org.assertj.core.api.Assertions.*;
 

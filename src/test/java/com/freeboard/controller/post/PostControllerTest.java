@@ -1,4 +1,4 @@
-package com.zun.freeboard.controller.post;
+package com.freeboard.controller.post;
 
 import static com.freeboard.domain.post.PostType.*;
 import static org.mockito.Mockito.*;
@@ -22,8 +22,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.freeboard.controller.post.PostController;
-import com.zun.freeboard.config.CustomMockUser;
+import com.freeboard.config.CustomMockUser;
 import com.freeboard.domain.post.Post;
 import com.freeboard.domain.post.PostType;
 import com.freeboard.domain.user.User;
