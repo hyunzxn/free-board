@@ -5,10 +5,10 @@ import java.io.Serializable;
 import org.springframework.security.access.PermissionEvaluator;
 import org.springframework.security.core.Authentication;
 
-import com.freeboard.domain.post.Post;
-import com.freeboard.domain.user.UserPrincipal;
-import com.freeboard.exception.NotFoundException;
-import com.freeboard.repository.post.PostRepository;
+import com.freeboard.common.exception.NotFoundException;
+import com.freeboard.post.domain.Post;
+import com.freeboard.post.repository.PostRepository;
+import com.freeboard.user.domain.UserPrincipal;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -28,7 +28,7 @@ public class BoardPermissionEvaluator implements PermissionEvaluator {
 	public boolean hasPermission(Authentication authentication, Serializable targetId, String targetType,
 		Object permission) {
 
-		UserPrincipal userPrincipal  = (UserPrincipal) authentication.getPrincipal();
+		UserPrincipal userPrincipal = (UserPrincipal)authentication.getPrincipal();
 
 		Post post = postRepository.findById((Long)targetId)
 			.orElseThrow(NotFoundException::new);

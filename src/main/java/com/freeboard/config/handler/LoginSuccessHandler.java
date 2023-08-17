@@ -7,7 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
-import com.freeboard.domain.user.UserPrincipal;
+import com.freeboard.user.domain.UserPrincipal;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -21,7 +21,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
 		Authentication authentication) throws IOException, ServletException {
 
-		UserPrincipal principal = (UserPrincipal) authentication.getPrincipal();
+		UserPrincipal principal = (UserPrincipal)authentication.getPrincipal();
 		log.info("[인증성공] user={}", principal.getUsername());
 
 		response.setContentType(MediaType.APPLICATION_JSON_VALUE);

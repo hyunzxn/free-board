@@ -6,7 +6,7 @@ import org.springframework.security.access.expression.method.DefaultMethodSecuri
 import org.springframework.security.access.expression.method.MethodSecurityExpressionHandler;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 
-import com.freeboard.repository.post.PostRepository;
+import com.freeboard.post.repository.PostRepository;
 
 import lombok.RequiredArgsConstructor;
 

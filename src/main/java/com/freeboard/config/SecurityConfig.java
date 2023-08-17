@@ -23,9 +23,9 @@ import com.freeboard.config.handler.Http401Handler;
 import com.freeboard.config.handler.Http403Handler;
 import com.freeboard.config.handler.LoginFailureHandler;
 import com.freeboard.config.handler.LoginSuccessHandler;
-import com.freeboard.domain.user.User;
-import com.freeboard.domain.user.UserPrincipal;
-import com.freeboard.repository.user.UserRepository;
+import com.freeboard.user.domain.User;
+import com.freeboard.user.domain.UserPrincipal;
+import com.freeboard.user.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

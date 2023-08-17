@@ -8,9 +8,9 @@ import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.test.context.support.WithSecurityContextFactory;
 
-import com.freeboard.domain.user.User;
-import com.freeboard.domain.user.UserPrincipal;
-import com.freeboard.repository.user.UserRepository;
+import com.freeboard.user.domain.User;
+import com.freeboard.user.domain.UserPrincipal;
+import com.freeboard.user.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 
