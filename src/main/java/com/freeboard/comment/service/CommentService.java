@@ -1,5 +1,7 @@
 package com.freeboard.comment.service;
 
+import java.util.Optional;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,7 +29,7 @@ public class CommentService {
 	private final PasswordEncoder passwordEncoder;
 
 	@Transactional
-	public CommentResponse createComment(Long userId, Long postId, CommentCreateServiceRequest request) {
+	public CommentResponse create(Long userId, Long postId, CommentCreateServiceRequest request) {
 		User user = userRepository.findById(userId).orElseThrow(NotFoundException::new);
 		Post post = postRepository.findById(postId).orElseThrow(NotFoundException::new);
 
@@ -38,5 +40,11 @@ public class CommentService {
 		comment.setPost(post);
 		Comment savedComment = commentRepository.save(comment);
 		return CommentResponse.of(savedComment);
+	}
+
+	@Transactional
+	public void delete(Long id) {
+		Comment comment = commentRepository.findById(id).orElseThrow(NotFoundException::new);
+		commentRepository.delete(comment);
 	}
 }

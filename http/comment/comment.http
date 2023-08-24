@@ -6,3 +6,6 @@ Content-Type: application/json
   "password": "12345",
   "content": "쉑쉑버거 맛있음 ㅇㅅㅇ"
 }
+
+### 댓글 삭제
+DELETE {{root-path}}/comments/1
